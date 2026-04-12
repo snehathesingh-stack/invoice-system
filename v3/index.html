@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invoice System v3 - View</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 40px;
+    }
+    .invoice {
+      border: 1px solid black;
+      padding: 20px;
+      width: 400px;
+    }
+    h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="invoice">
+    <h2>Invoice</h2>
+    <p><b>Invoice No:</b> 001</p>
+    <p><b>Date:</b> <span id="date"></span></p>
+    <p><b>Client:</b> Sneha Singh</p>
+
+    <hr>
+
+    <p><b>Item:</b> Web Development</p>
+    <p><b>Amount:</b> ₹5000</p>
+
+    <hr>
+
+    <h3>Total: ₹5000</h3>
+  </div>
+
+  <script>
+    document.getElementById('date').innerText =
+      new Date().toLocaleDateString();
+  </script>
+
+</body>
+</html>
