@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invoice System v2 - Edit</title>
+</head>
+<body>
+  <h1>Edit Invoice</h1>
+
+  <form onsubmit="event.preventDefault(); updateInvoice();">
+    <input type="text" id="client" value="Sneha Singh"><br><br>
+    <input type="number" id="amount" value="5000"><br><br>
+    <button type="submit">Update Invoice</button>
+  </form>
+
+  <div id="output">
+    <h3>Invoice #001</h3>
+    <p><b>Client:</b> Sneha Singh</p>
+    <p><b>Amount:</b> ₹5000</p>
+  </div>
+
+  <script>
+    function updateInvoice() {
+      const client = document.getElementById('client').value;
+      const amount = document.getElementById('amount').value;
+
+      document.getElementById('output').innerHTML =
+        `<h3>Invoice #001 (Updated)</h3>
+         <p><b>Client:</b> ${client}</p>
+         <p><b>Amount:</b> ₹${amount}</p>`;
+    }
+  </script>
+</body>
+</html>
