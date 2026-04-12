@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Invoice System v1 - Create</title></head>
+<body>
+  <h1>Create Invoice</h1>
+  <form>
+    <input type="text" id="client" placeholder="Client Name">
+    <input type="number" id="amount" placeholder="Amount">
+    <button onclick="createInvoice()">Generate Invoice</button>
+  </form>
+  <div id="output"></div>
+  <script>
+    function createInvoice() {
+      const client = document.getElementById('client').value;
+      const amount = document.getElementById('amount').value;
+      document.getElementById('output').innerHTML =
+        `<h3>Invoice #001</h3><p>Client: ${client}</p><p>Amount: ₹${amount}</p>`;
+    }
+  </script>
+</body>
+</html>
